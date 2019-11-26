@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8">
+    <title>The Rock</title>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+ 
+        .chart--container {
+            height: 100%;
+            width: 100%;
+            min-height: 150px;
+        }
+ 
+        .zc-ref {
+            display: none;
+        }
+ 
+        zing-grid[loading] {
+            height: 600px;
+        }
+    </style>
+    *All Data Collected From<a href="https://imdb.com"><img src="/assets/imdb.png" style="height:100px;position: relative;top:40px"></a>
+    <h1 style="text-align:center;font-size:50px">Dwayne 'The Rock' Johnson IMDB Review</h1>
+    <p style="text-align: center;font-size:40px">Can you smell what the Rock is cooking? Well, you definitely will after we dig deep into his career in the film industry and how he became one of today's biggest movie stars. Are you ready?</p>
+    <center><img src="/assets/dwayne_johnson_gif1.gif"></center>
+    <p style="text-align: center;font-size:40px">Dwayne Johnson has had a long prolific career spanning back to the late 90s and early 2000s when he debuted on the Wrestling Scene as 'The Rock'. Since then, he has spiraled into fame with his participation in great movies as seen below.</p>
+    <center><img src="/assets/collage1.png"></center>
+    <p style="text-align: center;font-size:40px">As you saw, Dwayne Johnson has had a pretty prolific movie career bouncing between the Action/Drama and Family-Friendly genres. He has now established himself in more Action/Comedy roles which suits him the best (earns him the most money).</p>
+    
+</head>
+ 
+<body style="background-color:khaki;">
+    <hr style="border-top: dashed 3px;width: 50%;" />
+    <center><span style="font-size: 50px">Does Dwayne Johnson 'Rock' Off Other's Success?</span><br></center>
+    <center><span style="text-align: center;font-size:40px">From the Top Paid Actors of 2019 (according to <a href="https://www.forbes.com/sites/maddieberg/2019/08/21/the-highest-paid-actors-2019-dwayne-johnson-bradley-cooper-and-chris-hemsworth/#20c8b0e02b96">Forbes</a>), let's compare the film collaborations between each actor to see whether or not the Rock may attribute his success due to the success of his peers.<br> </span></center>
+    <center><div id="chordChart" class="chart--container" style="height: 600px;width:50%"></div></center>
+    <script>
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+        let chartData = [{
+                text: 'The Rock', //1
+                values: [76, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: 'green'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },
+            {
+                text: 'Chris Hemsworth', //2
+                values: [0, 31, 4, 0, 0, 2, 0, 5, 1, 0],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },
+            {
+                text: 'R. D. Jr', //3
+                values: [0, 4, 101, 0, 0, 2, 0, 6, 2, 0],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },
+            {
+                text: 'Akshay Kumar', //4
+                values: [0, 0, 0, 153, 0, 0, 0, 0, 0, 0],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },{
+                text: 'Jackie Chan', //5
+                values: [0, 0, 0, 0, 194, 0, 0, 0, 0, 1],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },{
+                text: 'Bradley Cooper', //6
+                values: [0, 2, 2, 0,0,56,0,2,2,0],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },{
+                text: 'Adam Sandler', //7
+                values: [0, 0, 0, 0,0,0,81,0,0,0],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },{
+                text: 'Chris Evans', //8
+                values: [0, 5, 6, 0, 0, 2, 0, 41, 3, 0],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },
+            {
+                text: 'Paul Rudd', //9
+                values: [1, 1, 2, 0,0,2,0, 3, 71, 1],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            },
+            {
+                text: 'Will Smith', //10
+                values: [0, 0, 0, 0, 1, 0, 0, 0, 1, 106],
+                style: {
+                    band: {
+                        alpha: 1,
+                        backgroundColor: '#ffdd89'
+                    },
+                    label: {
+                        bold: true,
+                        fontFamily: 'arial',
+                        fontSize: '14px',
+                        fontColor: 'white'
+                    }
+                }
+            }
+        ]
+ 
+        let chartConfig = {
+            type: 'chord',
+            "plot": {
+                "legend-item": {
+                    "color": "white",
+                    "font-size": 14
+                }
+            },
+            backgroundColor: 'grey',
+            title: {
+                text: '',
+                backgroundColor: 'none',
+                fontColor: '#333',
+                fontFamily: 'arial',
+                textAlign: 'left'
+            },
+            legend: {
+                backgroundColor: 'none',
+                borderColor: 'gray',
+                borderWidth: '2px',
+                shadow: false
+            },
+            options: {
+                anglePadding: 5,
+                bandSpace: 2,
+                colorType: 'palette',
+                palette: ['#000', '#f26223', '#957244', '#ffdd89', '#703dba','#68f9df','#196e80','#2f5cce','#b47dc3','#60e24d'],
+                radius: 180,
+            },
+            plotarea: {
+                margin: '25px 40px 15px 40px'
+            },
+            series: chartData
+        };
+ 
+        zingchart.render({
+            id: 'chordChart',
+            data: chartConfig,
+            height: "110%"
+        });
+    </script>
+
+    <p style="text-align: center;font-size:40px">From the diagram, we can can clearly see the lack of association between The Rock and other actors in the top 10, with only one reference with Paul Rudd in Wet Hot American Summer. Dwayne Johnson stands alone in this list among the greats like Jackie Chan (who hasn't put out any movies this year, still earned $58 million), Will Smith, and Akshay Kumar. Meanwhile, most of the actors on here can attribute their earnings to the hottest blockbuster ever released (Avengers: Endgame). To top it off, The Rock has earned more this year than any other movie star in this chart ($89.4 million)! He definitely has alot of appeal and needs no other super-successful collaboration to perform better than the rest, another reason why The Rock is unbreakable! </p>
+    <center><img src="/assets/rock_strong_gif.gif"></center>
+    <hr style="border-top: dashed 3px;width: 50%;" />
+    <center><span style="font-size: 50px">How is The Rock Associated?</span><br></center>
+    <center><p style="text-align: center;font-size:40px">Dwayne Johnson has many aliases and is known worldwide by different aspects of his career, but what are his most prominent experiences which define him to many people? Let's investigate this by gathering all the Keywords he is associated with and form a Word Cloud.</p></center>
+    <div id='word-cloud'></div>
+    <li style="text-align: center;font-size:40px"><u>TV Special</u></li>
+    <p style="text-align: center;font-size:40px">As we see, "TV Special" is the most striking Keyword, and this makes sense due to Dwayne's frequent appearences on Late-Night and Award Shows which are known to boost the popularity of its guests. It is possible that Dwayne has garnered so much attention due to his appearences on these programs.</p>
+    <li style="text-align: center;font-size:40px"><u>Professional Wrestling</u></li>
+    <p style="text-align: center;font-size:40px">They don't call him The Rock for nothing! Professional Wrestling is where he first got his face known to the world and its still common for people to remember him as the WWE/WWF wrestler.</p>
+    <li style="text-align: center;font-size:40px"><u>Interview</u></li>
+    <p style="text-align: center;font-size:40px">The Rock has always been a funny and relatable character even off the big screen, and his interviews gain so much attention due to the hilarity and honesty. They defintely helped build his image and his social media delivers the same interview-esque vibes he has in professional interviews.</p>
+    <p style="text-align: center;font-size:40px">One major thing to notice about this Word Cloud are the prominence of some of the 'odd' associations The Rock has. For instance, there is much emphasis on "African American","Canadian",and "Texan" when we know that Dwayne is a Samoan-American from California. Also notice that even the Keyword "The Rock" is not emphasised as much as his wrestling career, which seems ironic. However, remember that these Keywords only reflects audience trends/misconceptions and shows a broad range of perceived associations about The Rock. Contains weird associations, right?</p>
+    <center><img src="/assets/rock_eyebrow_raise_gif.gif" style="height:400px;width:400px"></center>
+    <p style="text-align: center;font-size:40px">We've seen how Dwayne Johnson developed his film career, how he fares against today's top paid actors (still number 1!) and how he is percieved by his audience. Overall, the methods of visualizing these factors really did help in figuring out the context of what the data shows. And it shows that The Rock is one of the most successfull actors of our time!</p>
+    <center><img src="/assets/the_rock_smiling_gif.gif"></center>
+    <p style="font-size: 30px;">*Technologies used in this Review: Infogram, ZingCharts, IMDBPy.</p>
+    <script>
+zingchart.MODULESDIR='https://cdn.zingchart.com/modules/';
+  
+ 
+
+var myConfig = {
+  type: 'wordcloud',
+  backgroundColor: '#303030',
+  options: {
+      words: [
+    {
+      text: "TV Special",
+      count: 137
+    },
+    {
+      text: "World Wrestling Federation",
+      count: 85
+    },
+    {
+      text: "Professional Wrestling",
+      count: 74
+    },
+    {
+      text: "Wrestling",
+      count: 73
+    },
+    {
+      text: "Interview",
+      count: 60
+    },
+    {
+      text: "African American",
+      count: 55  
+    },
+    {
+      text: "Canadian",
+      count: 55  
+    },
+    {
+      text: "Dvd Extra",
+      count: 49
+    },
+    {
+      text: "Tag Team",
+      count: 49
+    },
+    {
+      text: "Tough Guy",
+      count: 49
+    },
+    {
+      text: "Non Fiction",
+      count: 42
+    },
+    {
+      text: "Texan",
+      count: 42
+    },
+    {
+      text: "Brother Brother Relationship",
+      count: 41
+    },
+    {
+      text: "Fire",
+      count: 39
+    },
+    {
+      text: "The Rock",
+      count: 39
+    },
+    {
+      text: "Bald Man",
+      count: 38
+    },
+    {
+      text: "Undertaker",
+      count: 38
+    },
+    {
+      text: "Giant",
+      count: 37
+    },
+    {
+      text: "Blood",
+      count: 36
+    },
+    {
+      text: "Monster",
+      count: 36
+    },
+    {
+      text: "Sequel",
+      count: 36
+    },
+    {
+      text: "Champion",
+      count: 35
+    },
+    {
+      text: "Manager",
+      count: 35
+    },
+    {
+      text: "World Wrestling Entertainment",
+      count: 35
+    },
+    {
+      text: "Awards Show",
+      count: 33
+    },
+    {
+      text: "Mask",
+      count: 33
+    },
+    {
+      text: "2010s",
+      count: 31
+    },
+    {
+      text: "Sexy Woman",
+      count: 31
+    },
+    {
+      text: "Martial Arts",
+      count: 30
+    },
+    {
+      text: "Feud",
+      count: 29
+    },
+    {
+      text: "Number In Title",
+      count: 29
+    },
+    {
+      text: "Violence",
+      count: 29
+    },
+    {
+      text: "Surprise Ending",
+      count: 28
+    },
+    {
+      text: "Brawl",
+      count: 26
+    },
+    {
+      text: "Olympic Gold Medalist",
+      count: 26
+    },
+    {
+      text: "Corporate Executive",
+      count: 25
+    },
+    {
+      text: "Father Son Relationship",
+      count: 25
+    },
+    {
+      text: "Wrestling Promoter",
+      count: 25
+    },
+    {
+      text: "Explosion",
+      count: 24
+    },
+    {
+      text: "Fat Man",
+      count: 24
+    },
+    {
+      text: "Female Bodybuilder",
+      count: 24
+    },
+    {
+      text: "Fight",
+      count: 24
+    },
+    {
+      text: "Fistfight",
+      count: 24
+    },
+    {
+      text: "Mixed Martial Arts",
+      count: 24
+    },
+    {
+      text: "Pistol",
+      count: 24
+    },
+    {
+      text: "Betrayal",
+      count: 23
+    },
+    {
+      text: "Falling From Height",
+      count: 23
+    },
+    {
+      text: "2000s",
+      count: 22
+    },
+    {
+      text: "Father Daughter Relationship",
+      count: 22
+    },
+    {
+      text: "Masked Wrestler",
+      count: 22
+    },
+    {
+      text: "Shot In The Chest",
+      count: 22
+    },
+    {
+      text: "Strongman",
+      count: 22
+    },
+    {
+      text: "Warrior",
+      count: 22
+    },
+    {
+      text: "Blonde",
+      count: 21
+    },
+    {
+      text: "British",
+      count: 21
+    },
+    {
+      text: "Character Name In Title",
+      count: 21
+    },
+    {
+      text: "Husband Wife Relationship",
+      count: 21
+    },
+    {
+      text: "Punched In The Face",
+      count: 21
+    },
+    {
+      text: "Southerner",
+      count: 21
+    },
+    {
+      text: "Title Spoken By Character",
+      count: 21
+    },
+    {
+      text: "Valet",
+      count: 21
+    },
+    {
+      text: "Action Hero",
+      count: 20
+    },
+    {
+      text: "Cell Phone",
+      count: 20
+    },
+    {
+      text: "Chair",
+      count: 20
+    },
+    {
+      text: "Female Bodyguard",
+      count: 20
+    },
+    {
+      text: "Flashback",
+      count: 20
+    },
+    {
+      text: "Jerk",
+      count: 20
+    },
+    {
+      text: "Machine Gun",
+      count: 20
+    },
+    {
+      text: "Tough Girl",
+      count: 20
+    },
+    {
+      text: "Ambush",
+      count: 19
+    },
+    {
+      text: "Bare Chested Male",
+      count: 19
+    },
+    {
+      text: "Celebrity",
+      count: 19
+    },
+    {
+      text: "Chase",
+      count: 19
+    },
+    {
+      text: "Death",
+      count: 19
+    },
+    {
+      text: "Held At Gunpoint",
+      count: 19
+    },
+    {
+      text: "Murder",
+      count: 19
+    },
+    {
+      text: "Samoan",
+      count: 19
+    },
+    {
+      text: "Showdown",
+      count: 19
+    },
+    {
+      text: "Brother Sister Relationship",
+      count: 18
+    },
+    {
+      text: "Handcuffs",
+      count: 18
+    },
+    {
+      text: "Live Audience",
+      count: 18
+    },
+    {
+      text: "Motorcycle",
+      count: 18
+    },
+    {
+      text: "Shootout",
+      count: 18
+    },
+    {
+      text: "Shot To Death",
+      count: 18
+    },
+    {
+      text: "Slow Motion Scene",
+      count: 18
+    },
+    {
+      text: "Title Bout",
+      count: 18
+    },
+    {
+      text: "Beating",
+      count: 17
+    },
+    {
+      text: "Demon",
+      count: 17
+    },
+    {
+      text: "Helicopter",
+      count: 17
+    },
+    {
+      text: "King",
+      count: 17
+    },
+    {
+      text: "Late Night",
+      count: 17
+    },
+    {
+      text: "Rattlesnake",
+      count: 17
+    },
+    {
+      text: "Redneck",
+      count: 17
+    },
+    {
+      text: "Referee",
+      count: 17
+    },
+    {
+      text: "Revenge",
+      count: 17
+    },
+    {
+      text: "Tattoo",
+      count: 17
+    },
+    {
+      text: "Acronym In Title",
+      count: 16
+    },
+    {
+      text: "Deception",
+      count: 16
+    },
+    {
+      text: "Dog",
+      count: 16
+    },
+    {
+      text: "Foot Chase",
+      count:  16
+    }
+  ]
+},
+  style: {
+      fontFamily: 'Crete Round',
+      
+      hoverState: {
+        backgroundColor: '#D32F2F',
+        borderRadius: 2,
+        fontColor: 'white'
+      },
+      tooltip: {
+        text: '%text: %hits',
+        visible: true,
+        alpha: 0.9,
+        backgroundColor: '#1976D2',
+        borderRadius: 2,
+        borderColor: 'none',
+        fontColor: 'white',
+        fontFamily: 'Georgia',
+        textAlpha: 1
+      }
+    }
+}
+
+zingchart.render({ 
+	id: 'word-cloud', 
+	data: myConfig, 
+	height: 400, 
+	width: '100%' 
+});
+
+    </script>
+</body>
+ 
+</html>
